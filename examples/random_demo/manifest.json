@@ -1,0 +1,264 @@
+{
+  "seed": 20261018,
+  "source": "prathumarikeri/american-sign-language-09az",
+  "license": "CC BY-SA 4.0",
+  "images": [
+    {
+      "file": "random_A.jpg",
+      "label": "A",
+      "source_path": "American/a/613.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_B.jpg",
+      "label": "B",
+      "source_path": "American/b/857 copy.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_C.jpg",
+      "label": "C",
+      "source_path": "American/c/1157.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_D.jpg",
+      "label": "D",
+      "source_path": "American/d/D1398.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_E.jpg",
+      "label": "E",
+      "source_path": "American/e/E447.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_F.jpg",
+      "label": "F",
+      "source_path": "American/f/F2123.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_G.jpg",
+      "label": "G",
+      "source_path": "American/g/373.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_H.jpg",
+      "label": "H",
+      "source_path": "American/h/564.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_I.jpg",
+      "label": "I",
+      "source_path": "American/i/1176 copy.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_K.jpeg",
+      "label": "K",
+      "source_path": "American/k/hand2_k_right_seg_2_cropped.jpeg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_L.jpg",
+      "label": "L",
+      "source_path": "American/l/294 copy.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_M.jpg",
+      "label": "M",
+      "source_path": "American/m/M349 copy 2.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_N.jpg",
+      "label": "N",
+      "source_path": "American/n/N562 copy 12.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_O.jpg",
+      "label": "O",
+      "source_path": "American/o/O278 copy 7.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_P.jpeg",
+      "label": "P",
+      "source_path": "American/p/hand1_p_dif_seg_4_cropped.jpeg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_Q.jpg",
+      "label": "Q",
+      "source_path": "American/q/Q403 copy 10.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_R.jpg",
+      "label": "R",
+      "source_path": "American/r/R2842 copy 2.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_S.jpg",
+      "label": "S",
+      "source_path": "American/s/S270 copy 2.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_T.jpg",
+      "label": "T",
+      "source_path": "American/t/T2986.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_U.jpg",
+      "label": "U",
+      "source_path": "American/u/U2519 copy.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_V.jpg",
+      "label": "V",
+      "source_path": "American/v/V330 copy 3.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_W.jpg",
+      "label": "W",
+      "source_path": "American/w/W927 copy 2.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_X.jpeg",
+      "label": "X",
+      "source_path": "American/x/hand4_x_bot_seg_1_cropped.jpeg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    },
+    {
+      "file": "random_Y.jpg",
+      "label": "Y",
+      "source_path": "American/y/Y2951 copy 2.jpg",
+      "split": "test",
+      "selection": "uniform per class; no prediction/confidence filter"
+    }
+  ],
+  "videos": [
+    {
+      "file": "montage_HI.mp4",
+      "title": "HI · held-out image montage",
+      "expected": "HI",
+      "kind": "still_image_montage",
+      "description": "Expected letters: H → I. Constructed from randomly selected test images with blank gaps.",
+      "source_images": [
+        "American/h/564.jpg",
+        "American/i/1176 copy.jpg"
+      ]
+    },
+    {
+      "file": "montage_YES.mp4",
+      "title": "YES · held-out image montage",
+      "expected": "YES",
+      "kind": "still_image_montage",
+      "description": "Expected letters: Y → E → S. Constructed from randomly selected test images with blank gaps.",
+      "source_images": [
+        "American/y/Y2951 copy 2.jpg",
+        "American/e/E447.jpg",
+        "American/s/S270 copy 2.jpg"
+      ]
+    },
+    {
+      "file": "montage_HELLO.mp4",
+      "title": "HELLO · held-out image montage",
+      "expected": "HELLO",
+      "kind": "still_image_montage",
+      "description": "Expected letters: H → E → L → L → O. Constructed from randomly selected test images with blank gaps.",
+      "source_images": [
+        "American/h/564.jpg",
+        "American/e/E447.jpg",
+        "American/l/294 copy.jpg",
+        "American/l/294 copy.jpg",
+        "American/o/O278 copy 7.jpg"
+      ]
+    },
+    {
+      "file": "montage_G.mp4",
+      "title": "G · held-out image montage",
+      "expected": "G",
+      "kind": "still_image_montage",
+      "description": "Expected letters: G. Constructed from randomly selected test images with blank gaps.",
+      "source_images": [
+        "American/g/373.jpg"
+      ]
+    },
+    {
+      "file": "montage_L.mp4",
+      "title": "L · held-out image montage",
+      "expected": "L",
+      "kind": "still_image_montage",
+      "description": "Expected letters: L. Constructed from randomly selected test images with blank gaps.",
+      "source_images": [
+        "American/l/294 copy.jpg"
+      ]
+    },
+    {
+      "file": "real_webcam_01.mp4",
+      "title": "Real webcam 1 · 6 seconds",
+      "kind": "real_webcam_excerpt",
+      "expected": null,
+      "description": "Real public webcam footage; no verified frame-level labels. Use to explore live-camera variation.",
+      "source": "GloriaNeo/SgSL-Sign-Language-Recognition/streamlit/videos/video_1.mp4",
+      "source_start_seconds": 7.91,
+      "duration_seconds": 6
+    },
+    {
+      "file": "real_webcam_02.mp4",
+      "title": "Real webcam 2 · 6 seconds",
+      "kind": "real_webcam_excerpt",
+      "expected": null,
+      "description": "Real public webcam footage; no verified frame-level labels. Use to explore live-camera variation.",
+      "source": "GloriaNeo/SgSL-Sign-Language-Recognition/streamlit/videos/video_2.mp4",
+      "source_start_seconds": 8.64,
+      "duration_seconds": 6
+    },
+    {
+      "file": "real_webcam_03.mp4",
+      "title": "Real webcam 3 · 6 seconds",
+      "kind": "real_webcam_excerpt",
+      "expected": null,
+      "description": "Real public webcam footage; no verified frame-level labels. Use to explore live-camera variation.",
+      "source": "GloriaNeo/SgSL-Sign-Language-Recognition/streamlit/videos/video_3.mp4",
+      "source_start_seconds": 4.5,
+      "duration_seconds": 6
+    }
+  ]
+}

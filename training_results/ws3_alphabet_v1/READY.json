@@ -1,0 +1,5 @@
+{
+  "report": "/data/users/chen/gp8001/runs/alphabet_20261018_v1/report.json",
+  "split_sha256": "4e87421ebf2bf6bc078e85977e0705121038836b57d4851a6cc8c6ccb62f2ec8",
+  "checkpoint": "alphabet_mlp.npz"
+}

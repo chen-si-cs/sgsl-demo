@@ -1,0 +1,199 @@
+{
+  "selection_changed_after_prediction": false,
+  "images": [
+    {
+      "file": "random_A.jpg",
+      "expected": "A",
+      "prediction": "A",
+      "confidence": 0.9991554021835327
+    },
+    {
+      "file": "random_B.jpg",
+      "expected": "B",
+      "prediction": "B",
+      "confidence": 0.9981240630149841
+    },
+    {
+      "file": "random_C.jpg",
+      "expected": "C",
+      "prediction": "C",
+      "confidence": 0.9972357153892517
+    },
+    {
+      "file": "random_D.jpg",
+      "expected": "D",
+      "prediction": "D",
+      "confidence": 0.9988538026809692
+    },
+    {
+      "file": "random_E.jpg",
+      "expected": "E",
+      "prediction": "E",
+      "confidence": 0.9989445805549622
+    },
+    {
+      "file": "random_F.jpg",
+      "expected": "F",
+      "prediction": "F",
+      "confidence": 0.9979548454284668
+    },
+    {
+      "file": "random_G.jpg",
+      "expected": "G",
+      "prediction": "G",
+      "confidence": 0.9976723790168762
+    },
+    {
+      "file": "random_H.jpg",
+      "expected": "H",
+      "prediction": "H",
+      "confidence": 0.9985480904579163
+    },
+    {
+      "file": "random_I.jpg",
+      "expected": "I",
+      "prediction": "I",
+      "confidence": 0.998306155204773
+    },
+    {
+      "file": "random_K.jpeg",
+      "expected": "K",
+      "prediction": "K",
+      "confidence": 0.9982277750968933
+    },
+    {
+      "file": "random_L.jpg",
+      "expected": "L",
+      "prediction": "L",
+      "confidence": 0.9978952407836914
+    },
+    {
+      "file": "random_M.jpg",
+      "expected": "M",
+      "prediction": "M",
+      "confidence": 0.9962928891181946
+    },
+    {
+      "file": "random_N.jpg",
+      "expected": "N",
+      "prediction": "UNCERTAIN",
+      "confidence": 0.5633329749107361
+    },
+    {
+      "file": "random_O.jpg",
+      "expected": "O",
+      "prediction": "O",
+      "confidence": 0.997161865234375
+    },
+    {
+      "file": "random_P.jpeg",
+      "expected": "P",
+      "prediction": "P",
+      "confidence": 0.9979630708694458
+    },
+    {
+      "file": "random_Q.jpg",
+      "expected": "Q",
+      "prediction": "Q",
+      "confidence": 0.8905159831047058
+    },
+    {
+      "file": "random_R.jpg",
+      "expected": "R",
+      "prediction": "R",
+      "confidence": 0.9979526996612549
+    },
+    {
+      "file": "random_S.jpg",
+      "expected": "S",
+      "prediction": "S",
+      "confidence": 0.9981895089149475
+    },
+    {
+      "file": "random_T.jpg",
+      "expected": "T",
+      "prediction": "T",
+      "confidence": 0.9974160194396973
+    },
+    {
+      "file": "random_U.jpg",
+      "expected": "U",
+      "prediction": "U",
+      "confidence": 0.9880583882331848
+    },
+    {
+      "file": "random_V.jpg",
+      "expected": "V",
+      "prediction": "V",
+      "confidence": 0.9928736686706543
+    },
+    {
+      "file": "random_W.jpg",
+      "expected": "W",
+      "prediction": "W",
+      "confidence": 0.9978148937225342
+    },
+    {
+      "file": "random_X.jpeg",
+      "expected": "X",
+      "prediction": "X",
+      "confidence": 0.9959322810173035
+    },
+    {
+      "file": "random_Y.jpg",
+      "expected": "Y",
+      "prediction": "Y",
+      "confidence": 0.9992274045944214
+    }
+  ],
+  "videos": [
+    {
+      "file": "montage_HI.mp4",
+      "expected": "HI",
+      "sequence": "H",
+      "coverage": 0.375
+    },
+    {
+      "file": "montage_YES.mp4",
+      "expected": "YES",
+      "sequence": "YES",
+      "coverage": 0.75
+    },
+    {
+      "file": "montage_HELLO.mp4",
+      "expected": "HELLO",
+      "sequence": "HEO",
+      "coverage": 0.4444444444444444
+    },
+    {
+      "file": "montage_G.mp4",
+      "expected": "G",
+      "sequence": "C",
+      "coverage": 0.75
+    },
+    {
+      "file": "montage_L.mp4",
+      "expected": "L",
+      "sequence": "",
+      "coverage": 0.0
+    },
+    {
+      "file": "real_webcam_01.mp4",
+      "expected": null,
+      "sequence": "CF",
+      "coverage": 1.0
+    },
+    {
+      "file": "real_webcam_02.mp4",
+      "expected": null,
+      "sequence": "GI",
+      "coverage": 1.0
+    },
+    {
+      "file": "real_webcam_03.mp4",
+      "expected": null,
+      "sequence": "SA",
+      "coverage": 0.6805555555555556
+    }
+  ]
+}

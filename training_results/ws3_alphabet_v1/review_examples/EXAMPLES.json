@@ -1,0 +1,298 @@
+{
+  "correct": [
+    {
+      "path": "American/a/A412.jpg",
+      "label": "A",
+      "prediction": "A",
+      "confidence": 0.9996311664581299,
+      "correct": true,
+      "exported_file": "correct_A_A.jpg"
+    },
+    {
+      "path": "American/b/B1691.jpg",
+      "label": "B",
+      "prediction": "B",
+      "confidence": 0.9988040924072266,
+      "correct": true,
+      "exported_file": "correct_B_B.jpg"
+    },
+    {
+      "path": "American/c/C2332.jpg",
+      "label": "C",
+      "prediction": "C",
+      "confidence": 0.9994271993637085,
+      "correct": true,
+      "exported_file": "correct_C_C.jpg"
+    },
+    {
+      "path": "American/d/D2113.jpg",
+      "label": "D",
+      "prediction": "D",
+      "confidence": 0.9999951124191284,
+      "correct": true,
+      "exported_file": "correct_D_D.jpg"
+    },
+    {
+      "path": "American/e/E1217.jpg",
+      "label": "E",
+      "prediction": "E",
+      "confidence": 0.9996945858001709,
+      "correct": true,
+      "exported_file": "correct_E_E.jpg"
+    },
+    {
+      "path": "American/f/F2367.jpg",
+      "label": "F",
+      "prediction": "F",
+      "confidence": 0.9999196529388428,
+      "correct": true,
+      "exported_file": "correct_F_F.jpg"
+    },
+    {
+      "path": "American/g/G285.jpg",
+      "label": "G",
+      "prediction": "G",
+      "confidence": 0.9995430707931519,
+      "correct": true,
+      "exported_file": "correct_G_G.jpg"
+    },
+    {
+      "path": "American/h/H451.jpg",
+      "label": "H",
+      "prediction": "H",
+      "confidence": 0.999187171459198,
+      "correct": true,
+      "exported_file": "correct_H_H.jpg"
+    },
+    {
+      "path": "American/i/1025.jpg",
+      "label": "I",
+      "prediction": "I",
+      "confidence": 0.998936116695404,
+      "correct": true,
+      "exported_file": "correct_I_I.jpg"
+    },
+    {
+      "path": "American/k/147 copy.jpg",
+      "label": "K",
+      "prediction": "K",
+      "confidence": 0.9993225336074829,
+      "correct": true,
+      "exported_file": "correct_K_K.jpg"
+    },
+    {
+      "path": "American/l/904 copy.jpg",
+      "label": "L",
+      "prediction": "L",
+      "confidence": 0.9988020658493042,
+      "correct": true,
+      "exported_file": "correct_L_L.jpg"
+    },
+    {
+      "path": "American/m/M332 copy 2.jpg",
+      "label": "M",
+      "prediction": "M",
+      "confidence": 0.9999669790267944,
+      "correct": true,
+      "exported_file": "correct_M_M.jpg"
+    },
+    {
+      "path": "American/n/N304 copy 17.jpg",
+      "label": "N",
+      "prediction": "N",
+      "confidence": 0.9997616410255432,
+      "correct": true,
+      "exported_file": "correct_N_N.jpg"
+    },
+    {
+      "path": "American/o/O173 copy.jpg",
+      "label": "O",
+      "prediction": "O",
+      "confidence": 0.9996827840805054,
+      "correct": true,
+      "exported_file": "correct_O_O.jpg"
+    },
+    {
+      "path": "American/p/P61 copy 2.jpg",
+      "label": "P",
+      "prediction": "P",
+      "confidence": 0.999468982219696,
+      "correct": true,
+      "exported_file": "correct_P_P.jpg"
+    },
+    {
+      "path": "American/q/Q787 copy 10.jpg",
+      "label": "Q",
+      "prediction": "Q",
+      "confidence": 0.9991402626037598,
+      "correct": true,
+      "exported_file": "correct_Q_Q.jpg"
+    },
+    {
+      "path": "American/r/R334.jpg",
+      "label": "R",
+      "prediction": "R",
+      "confidence": 0.9997163414955139,
+      "correct": true,
+      "exported_file": "correct_R_R.jpg"
+    },
+    {
+      "path": "American/s/S349.jpg",
+      "label": "S",
+      "prediction": "S",
+      "confidence": 0.9997535347938538,
+      "correct": true,
+      "exported_file": "correct_S_S.jpg"
+    },
+    {
+      "path": "American/t/T2949 copy 2.jpg",
+      "label": "T",
+      "prediction": "T",
+      "confidence": 0.9990498423576355,
+      "correct": true,
+      "exported_file": "correct_T_T.jpg"
+    },
+    {
+      "path": "American/u/U2527.jpg",
+      "label": "U",
+      "prediction": "U",
+      "confidence": 0.9987976551055908,
+      "correct": true,
+      "exported_file": "correct_U_U.jpg"
+    },
+    {
+      "path": "American/v/V2814 copy 3.jpg",
+      "label": "V",
+      "prediction": "V",
+      "confidence": 0.9995812773704529,
+      "correct": true,
+      "exported_file": "correct_V_V.jpg"
+    },
+    {
+      "path": "American/w/W2864 copy 5.jpg",
+      "label": "W",
+      "prediction": "W",
+      "confidence": 0.9989731311798096,
+      "correct": true,
+      "exported_file": "correct_W_W.jpg"
+    },
+    {
+      "path": "American/x/hand2_x_bot_seg_1_cropped.jpeg",
+      "label": "X",
+      "prediction": "X",
+      "confidence": 0.9997257590293884,
+      "correct": true,
+      "exported_file": "correct_X_X.jpg"
+    },
+    {
+      "path": "American/y/Y2951 copy 2.jpg",
+      "label": "Y",
+      "prediction": "Y",
+      "confidence": 0.9992276430130005,
+      "correct": true,
+      "exported_file": "correct_Y_Y.jpg"
+    }
+  ],
+  "errors": [
+    {
+      "path": "American/r/R2781 copy.jpg",
+      "label": "R",
+      "prediction": "A",
+      "confidence": 0.9941892623901367,
+      "correct": false,
+      "exported_file": "error_R_A.jpg"
+    },
+    {
+      "path": "American/d/D2982.jpg",
+      "label": "D",
+      "prediction": "I",
+      "confidence": 0.9734724760055542,
+      "correct": false,
+      "exported_file": "error_D_I.jpg"
+    },
+    {
+      "path": "American/h/H2318.jpg",
+      "label": "H",
+      "prediction": "G",
+      "confidence": 0.9644103646278381,
+      "correct": false,
+      "exported_file": "error_H_G.jpg"
+    },
+    {
+      "path": "American/r/R2767 copy 2.jpg",
+      "label": "R",
+      "prediction": "G",
+      "confidence": 0.9207374453544617,
+      "correct": false,
+      "exported_file": "error_R_G.jpg"
+    },
+    {
+      "path": "American/o/777.jpg",
+      "label": "O",
+      "prediction": "A",
+      "confidence": 0.8827261328697205,
+      "correct": false,
+      "exported_file": "error_O_A.jpg"
+    },
+    {
+      "path": "American/o/hand2_o_left_seg_3_cropped.jpeg",
+      "label": "O",
+      "prediction": "C",
+      "confidence": 0.865217387676239,
+      "correct": false,
+      "exported_file": "error_O_C.jpg"
+    },
+    {
+      "path": "American/v/V2567 copy 5.jpg",
+      "label": "V",
+      "prediction": "U",
+      "confidence": 0.8521851301193237,
+      "correct": false,
+      "exported_file": "error_V_U.jpg"
+    },
+    {
+      "path": "American/c/C1155.jpg",
+      "label": "C",
+      "prediction": "H",
+      "confidence": 0.8319771885871887,
+      "correct": false,
+      "exported_file": "error_C_H.jpg"
+    },
+    {
+      "path": "American/a/hand1_a_right_seg_5_cropped.jpeg",
+      "label": "A",
+      "prediction": "B",
+      "confidence": 0.82430100440979,
+      "correct": false,
+      "exported_file": "error_A_B.jpg"
+    },
+    {
+      "path": "American/h/H2331.jpg",
+      "label": "H",
+      "prediction": "G",
+      "confidence": 0.8097059726715088,
+      "correct": false,
+      "exported_file": "error_H_G.jpg"
+    },
+    {
+      "path": "American/u/U2975 copy.jpg",
+      "label": "U",
+      "prediction": "R",
+      "confidence": 0.7645980715751648,
+      "correct": false,
+      "exported_file": "error_U_R.jpg"
+    },
+    {
+      "path": "American/d/D2297.jpg",
+      "label": "D",
+      "prediction": "O",
+      "confidence": 0.7447798848152161,
+      "correct": false,
+      "exported_file": "error_D_O.jpg"
+    }
+  ],
+  "montage": {
+    "letters": "CAB",
+    "description": "Held-out still-image montage; not a real signing performance."
+  }
+}
