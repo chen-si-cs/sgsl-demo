@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import tempfile
 import uuid
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -10,8 +11,9 @@ import numpy as np
 
 from .classifier import Prediction, TinySequenceClassifier
 from .features import visible_fraction
-from .decoder import decode_letters
+from .decoder import decode_consistent_letters
 from .landmarks import MediaPipeLandmarkExtractor, save_landmark_preview
+from .video_hud import render_prediction_video
 
 
 @dataclass(frozen=True)
@@ -56,26 +58,39 @@ class RecognitionPipeline:
             note=note,
         )
 
-    def predict_video(self, video_path: str | Path, threshold: float = 0.65) -> InferenceResult:
+    def predict_video(self, video_path: str | Path, threshold: float = 0.65,
+                      *, output_path: str | Path | None = None, credit: str = "",
+                      sample_hz: float = 10, playback_speed: float = 1) -> InferenceResult:
         if not video_path:
             raise ValueError("Please upload or record a video")
         with MediaPipeLandmarkExtractor(self.model_dir) as extractor:
-            extracted = extractor.extract_video(video_path)
+            extracted = extractor.extract_video(video_path, sample_hz=sample_hz, max_frames=600)
         prediction = self._predict_sequence(extracted.landmarks, threshold)
         tokens = []
+        preview_path = Path(output_path) if output_path else Path(tempfile.gettempdir()) / f"sgsl_landmarks_{uuid.uuid4().hex}.mp4"
         if hasattr(self.classifier, "frame_probabilities"):
             probabilities, indices = self.classifier.frame_probabilities(extracted.landmarks)
-            tokens, display = decode_letters(probabilities, indices, self.classifier.classes,
-                                               len(extracted.landmarks), threshold)
-            for frame, (label, confidence) in zip(extracted.overlays_bgr, display):
-                cv2.rectangle(frame, (0, 0), (frame.shape[1], 40), (55, 35, 20), -1)
-                cv2.putText(frame, f"{label}  {confidence:.0%}", (12, 28),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.75, (240, 245, 250), 2, cv2.LINE_AA)
+            times = np.asarray(extracted.sampled_frame_indices) / extracted.input_fps
+            tokens, display = decode_consistent_letters(probabilities, indices, self.classifier.classes,
+                                                        times, threshold)
             for token in tokens:
                 token["time_seconds"] = extracted.sampled_frame_indices[token["sample_index"]] / extracted.input_fps
-        preview_path = Path(tempfile.gettempdir()) / f"sgsl_landmarks_{uuid.uuid4().hex}.mp4"
-        preview_fps = min(15.0, max(6.0, extracted.input_fps * len(extracted.overlays_bgr) / max(1, extracted.sampled_frame_indices[-1] + 1)))
-        save_landmark_preview(extracted.overlays_bgr, preview_path, preview_fps)
+            render_prediction_video(video_path, preview_path, extracted.landmarks,
+                                    extracted.sampled_frame_indices, extracted.input_fps,
+                                    display, tokens, credit, playback_speed=playback_speed)
+            report_path = preview_path.with_suffix(".predictions.json")
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            report.update({"sampling_hz": sample_hz, "decoder": "causal_time_consensus_v1",
+                           "threshold": threshold, "window_seconds": .30,
+                           "minimum_support_frames": 2, "consensus_fraction": 2 / 3,
+                           "min_margin": .10, "blank_reset_seconds": .30,
+                           "classes": list(self.classifier.classes),
+                           "raw_probabilities": probabilities.tolist(),
+                           "valid_sample_indices": indices.tolist()})
+            report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+        else:
+            preview_fps = extracted.input_fps * len(extracted.overlays_bgr) / max(1, extracted.sampled_frame_indices[-1] + 1)
+            save_landmark_preview(extracted.overlays_bgr, preview_path, preview_fps * playback_speed)
         note = self._model_note()
         return InferenceResult(
             prediction=prediction,
@@ -97,7 +112,7 @@ class RecognitionPipeline:
 
 def format_result(result: InferenceResult) -> tuple[str, dict[str, float], str]:
     prediction = result.prediction
-    if result.sequence_text and len(result.sequence_text) > 1:
+    if result.sequence_text:
         headline = f"Stable letter sequence: {result.sequence_text}"
     elif prediction.label == "NO_HAND":
         headline = "No hand detected"

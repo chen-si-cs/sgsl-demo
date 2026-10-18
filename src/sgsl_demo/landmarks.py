@@ -47,6 +47,26 @@ def _default_model_dir() -> Path:
     return Path(__file__).resolve().parents[2] / "models" / "mediapipe"
 
 
+def video_sample_indices(frame_count: int, fps: float, *, sample_hz: float | None = None,
+                         max_frames: int | None = 72) -> list[int]:
+    if frame_count <= 0 or not np.isfinite(fps) or fps <= 0:
+        raise ValueError("Video must have a positive frame count and frame rate")
+    if max_frames is not None and max_frames <= 0:
+        raise ValueError("max_frames must be positive")
+    if sample_hz is None:
+        count = min(frame_count, max_frames or frame_count)
+        return sorted(set(np.linspace(0, frame_count - 1, count).astype(int).tolist()))
+    if not np.isfinite(sample_hz) or sample_hz <= 0:
+        raise ValueError("sample_hz must be positive and finite")
+    # Quantise the fixed source-time grid to the closest available source frame.
+    grid = np.arange(0.0, frame_count / fps, 1.0 / sample_hz)
+    indices = sorted(set(np.rint(grid * fps).astype(int).tolist()))
+    indices = [index for index in indices if index < frame_count]
+    if max_frames is not None and len(indices) > max_frames:
+        raise ValueError(f"Clip requires {len(indices)} samples at {sample_hz:g} Hz; use a shorter clip (limit {max_frames})")
+    return indices
+
+
 class MediaPipeLandmarkExtractor:
     """Extract two hands plus an upper-body subset with official MediaPipe Tasks."""
 
@@ -186,7 +206,8 @@ class MediaPipeLandmarkExtractor:
     def extract_images(self, frames_bgr: Iterable[np.ndarray]) -> list[ExtractedFrame]:
         return [self.extract_frame(frame) for frame in frames_bgr]
 
-    def extract_video(self, path: str | Path, max_frames: int = 72) -> ExtractedSequence:
+    def extract_video(self, path: str | Path, max_frames: int | None = 72,
+                      *, sample_hz: float | None = None) -> ExtractedSequence:
         path = Path(path)
         capture_path = str(path)
         if os.name == "nt" and not capture_path.isascii():
@@ -199,8 +220,11 @@ class MediaPipeLandmarkExtractor:
             raise ValueError(f"Could not open video: {path}")
         frame_count = max(1, int(capture.get(cv2.CAP_PROP_FRAME_COUNT)))
         fps = float(capture.get(cv2.CAP_PROP_FPS) or 24.0)
-        sample_count = min(max_frames, frame_count)
-        indices = sorted(set(np.linspace(0, frame_count - 1, sample_count).astype(int).tolist()))
+        try:
+            indices = video_sample_indices(frame_count, fps, sample_hz=sample_hz, max_frames=max_frames)
+        except Exception:
+            capture.release()
+            raise
         extracted: list[ExtractedFrame] = []
         used: list[int] = []
         for frame_index in indices:

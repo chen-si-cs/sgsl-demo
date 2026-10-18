@@ -1,0 +1,535 @@
+{
+  "kind": "model_prediction",
+  "sentence_translation": false,
+  "fps": 25.0,
+  "frames": 150,
+  "duration_seconds": 6.0,
+  "sampled_frames": 72,
+  "composition": "A",
+  "timeline": [
+    {
+      "label": "A",
+      "sample_index": 29,
+      "confidence": 0.9489460587501526,
+      "time_seconds": 2.4
+    }
+  ],
+  "sampled_frame_indices": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    65,
+    67,
+    69,
+    71,
+    73,
+    75,
+    77,
+    79,
+    81,
+    83,
+    86,
+    88,
+    90,
+    92,
+    94,
+    96,
+    98,
+    100,
+    102,
+    104,
+    107,
+    109,
+    111,
+    113,
+    115,
+    117,
+    119,
+    121,
+    123,
+    125,
+    128,
+    130,
+    132,
+    134,
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    149
+  ],
+  "frame_predictions": [
+    {
+      "sample_index": 0,
+      "time_seconds": 0.0,
+      "label": "UNCERTAIN",
+      "confidence": 0.5230651497840881
+    },
+    {
+      "sample_index": 1,
+      "time_seconds": 0.08,
+      "label": "UNCERTAIN",
+      "confidence": 0.211504727602005
+    },
+    {
+      "sample_index": 2,
+      "time_seconds": 0.16,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 3,
+      "time_seconds": 0.24,
+      "label": "UNCERTAIN",
+      "confidence": 0.6460162997245789
+    },
+    {
+      "sample_index": 4,
+      "time_seconds": 0.32,
+      "label": "H",
+      "confidence": 0.7415680885314941
+    },
+    {
+      "sample_index": 5,
+      "time_seconds": 0.4,
+      "label": "G",
+      "confidence": 0.6957534551620483
+    },
+    {
+      "sample_index": 6,
+      "time_seconds": 0.48,
+      "label": "UNCERTAIN",
+      "confidence": 0.5908579230308533
+    },
+    {
+      "sample_index": 7,
+      "time_seconds": 0.56,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 8,
+      "time_seconds": 0.64,
+      "label": "UNCERTAIN",
+      "confidence": 0.5542913675308228
+    },
+    {
+      "sample_index": 9,
+      "time_seconds": 0.72,
+      "label": "UNCERTAIN",
+      "confidence": 0.63142991065979
+    },
+    {
+      "sample_index": 10,
+      "time_seconds": 0.8,
+      "label": "UNCERTAIN",
+      "confidence": 0.41151219606399536
+    },
+    {
+      "sample_index": 11,
+      "time_seconds": 0.92,
+      "label": "UNCERTAIN",
+      "confidence": 0.6469508409500122
+    },
+    {
+      "sample_index": 12,
+      "time_seconds": 1.0,
+      "label": "UNCERTAIN",
+      "confidence": 0.5327471494674683
+    },
+    {
+      "sample_index": 13,
+      "time_seconds": 1.08,
+      "label": "UNCERTAIN",
+      "confidence": 0.4801601767539978
+    },
+    {
+      "sample_index": 14,
+      "time_seconds": 1.16,
+      "label": "UNCERTAIN",
+      "confidence": 0.6470538973808289
+    },
+    {
+      "sample_index": 15,
+      "time_seconds": 1.24,
+      "label": "K",
+      "confidence": 0.8545792102813721
+    },
+    {
+      "sample_index": 16,
+      "time_seconds": 1.32,
+      "label": "UNCERTAIN",
+      "confidence": 0.3644656836986542
+    },
+    {
+      "sample_index": 17,
+      "time_seconds": 1.4,
+      "label": "UNCERTAIN",
+      "confidence": 0.3792102038860321
+    },
+    {
+      "sample_index": 18,
+      "time_seconds": 1.48,
+      "label": "UNCERTAIN",
+      "confidence": 0.5654510855674744
+    },
+    {
+      "sample_index": 19,
+      "time_seconds": 1.56,
+      "label": "UNCERTAIN",
+      "confidence": 0.6443015933036804
+    },
+    {
+      "sample_index": 20,
+      "time_seconds": 1.64,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 21,
+      "time_seconds": 1.76,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 22,
+      "time_seconds": 1.84,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 23,
+      "time_seconds": 1.92,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 24,
+      "time_seconds": 2.0,
+      "label": "A",
+      "confidence": 0.9804525375366211
+    },
+    {
+      "sample_index": 25,
+      "time_seconds": 2.08,
+      "label": "UNCERTAIN",
+      "confidence": 0.38380900025367737
+    },
+    {
+      "sample_index": 26,
+      "time_seconds": 2.16,
+      "label": "UNCERTAIN",
+      "confidence": 0.6145828366279602
+    },
+    {
+      "sample_index": 27,
+      "time_seconds": 2.24,
+      "label": "A",
+      "confidence": 0.763068437576294
+    },
+    {
+      "sample_index": 28,
+      "time_seconds": 2.32,
+      "label": "A",
+      "confidence": 0.9069526195526123
+    },
+    {
+      "sample_index": 29,
+      "time_seconds": 2.4,
+      "label": "A",
+      "confidence": 0.9489460587501526
+    },
+    {
+      "sample_index": 30,
+      "time_seconds": 2.48,
+      "label": "UNCERTAIN",
+      "confidence": 0.5062945485115051
+    },
+    {
+      "sample_index": 31,
+      "time_seconds": 2.6,
+      "label": "O",
+      "confidence": 0.6956919431686401
+    },
+    {
+      "sample_index": 32,
+      "time_seconds": 2.68,
+      "label": "A",
+      "confidence": 0.6873258352279663
+    },
+    {
+      "sample_index": 33,
+      "time_seconds": 2.76,
+      "label": "A",
+      "confidence": 0.8903490304946899
+    },
+    {
+      "sample_index": 34,
+      "time_seconds": 2.84,
+      "label": "UNCERTAIN",
+      "confidence": 0.4216480851173401
+    },
+    {
+      "sample_index": 35,
+      "time_seconds": 2.92,
+      "label": "UNCERTAIN",
+      "confidence": 0.5242169499397278
+    },
+    {
+      "sample_index": 36,
+      "time_seconds": 3.0,
+      "label": "UNCERTAIN",
+      "confidence": 0.5828834176063538
+    },
+    {
+      "sample_index": 37,
+      "time_seconds": 3.08,
+      "label": "UNCERTAIN",
+      "confidence": 0.5866987109184265
+    },
+    {
+      "sample_index": 38,
+      "time_seconds": 3.16,
+      "label": "G",
+      "confidence": 0.7641915082931519
+    },
+    {
+      "sample_index": 39,
+      "time_seconds": 3.24,
+      "label": "UNCERTAIN",
+      "confidence": 0.5751177072525024
+    },
+    {
+      "sample_index": 40,
+      "time_seconds": 3.32,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 41,
+      "time_seconds": 3.44,
+      "label": "G",
+      "confidence": 0.7388430237770081
+    },
+    {
+      "sample_index": 42,
+      "time_seconds": 3.52,
+      "label": "UNCERTAIN",
+      "confidence": 0.3041335344314575
+    },
+    {
+      "sample_index": 43,
+      "time_seconds": 3.6,
+      "label": "UNCERTAIN",
+      "confidence": 0.6295657157897949
+    },
+    {
+      "sample_index": 44,
+      "time_seconds": 3.68,
+      "label": "R",
+      "confidence": 0.6500929594039917
+    },
+    {
+      "sample_index": 45,
+      "time_seconds": 3.76,
+      "label": "R",
+      "confidence": 0.7000484466552734
+    },
+    {
+      "sample_index": 46,
+      "time_seconds": 3.84,
+      "label": "UNCERTAIN",
+      "confidence": 0.6217629313468933
+    },
+    {
+      "sample_index": 47,
+      "time_seconds": 3.92,
+      "label": "UNCERTAIN",
+      "confidence": 0.41593801975250244
+    },
+    {
+      "sample_index": 48,
+      "time_seconds": 4.0,
+      "label": "UNCERTAIN",
+      "confidence": 0.5115177631378174
+    },
+    {
+      "sample_index": 49,
+      "time_seconds": 4.08,
+      "label": "UNCERTAIN",
+      "confidence": 0.3989918828010559
+    },
+    {
+      "sample_index": 50,
+      "time_seconds": 4.16,
+      "label": "UNCERTAIN",
+      "confidence": 0.2485404908657074
+    },
+    {
+      "sample_index": 51,
+      "time_seconds": 4.28,
+      "label": "UNCERTAIN",
+      "confidence": 0.48017409443855286
+    },
+    {
+      "sample_index": 52,
+      "time_seconds": 4.36,
+      "label": "UNCERTAIN",
+      "confidence": 0.5623899698257446
+    },
+    {
+      "sample_index": 53,
+      "time_seconds": 4.44,
+      "label": "UNCERTAIN",
+      "confidence": 0.32295241951942444
+    },
+    {
+      "sample_index": 54,
+      "time_seconds": 4.52,
+      "label": "UNCERTAIN",
+      "confidence": 0.27244192361831665
+    },
+    {
+      "sample_index": 55,
+      "time_seconds": 4.6,
+      "label": "UNCERTAIN",
+      "confidence": 0.35401055216789246
+    },
+    {
+      "sample_index": 56,
+      "time_seconds": 4.68,
+      "label": "UNCERTAIN",
+      "confidence": 0.5171101689338684
+    },
+    {
+      "sample_index": 57,
+      "time_seconds": 4.76,
+      "label": "UNCERTAIN",
+      "confidence": 0.467431902885437
+    },
+    {
+      "sample_index": 58,
+      "time_seconds": 4.84,
+      "label": "UNCERTAIN",
+      "confidence": 0.5013213157653809
+    },
+    {
+      "sample_index": 59,
+      "time_seconds": 4.92,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 60,
+      "time_seconds": 5.0,
+      "label": "A",
+      "confidence": 0.7967584133148193
+    },
+    {
+      "sample_index": 61,
+      "time_seconds": 5.12,
+      "label": "UNCERTAIN",
+      "confidence": 0.567939043045044
+    },
+    {
+      "sample_index": 62,
+      "time_seconds": 5.2,
+      "label": "A",
+      "confidence": 0.8260705471038818
+    },
+    {
+      "sample_index": 63,
+      "time_seconds": 5.28,
+      "label": "A",
+      "confidence": 0.7705483436584473
+    },
+    {
+      "sample_index": 64,
+      "time_seconds": 5.36,
+      "label": "UNCERTAIN",
+      "confidence": 0.3728739619255066
+    },
+    {
+      "sample_index": 65,
+      "time_seconds": 5.44,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    },
+    {
+      "sample_index": 66,
+      "time_seconds": 5.52,
+      "label": "UNCERTAIN",
+      "confidence": 0.5964179635047913
+    },
+    {
+      "sample_index": 67,
+      "time_seconds": 5.6,
+      "label": "UNCERTAIN",
+      "confidence": 0.3666630983352661
+    },
+    {
+      "sample_index": 68,
+      "time_seconds": 5.68,
+      "label": "A",
+      "confidence": 0.7485437393188477
+    },
+    {
+      "sample_index": 69,
+      "time_seconds": 5.76,
+      "label": "A",
+      "confidence": 0.6728777885437012
+    },
+    {
+      "sample_index": 70,
+      "time_seconds": 5.84,
+      "label": "UNCERTAIN",
+      "confidence": 0.38083866238594055
+    },
+    {
+      "sample_index": 71,
+      "time_seconds": 5.96,
+      "label": "NO_HAND",
+      "confidence": 0.0
+    }
+  ],
+  "rendering": "offline; sample-held character HUD; not a live speed measurement",
+  "model_sha256": "fc69ca06bc866dbd153470c451eeb04d28a568001bc4c2d7f1747c5c9a1bf47d",
+  "source_sha256": "cfc942f1b782bb7c7523d03fc667b06eb61d5d694c7b6dfa9492903163e2cb53",
+  "threshold": 0.65,
+  "dwell_samples": 3,
+  "hand_detection_coverage": 0.8611111111111112,
+  "processing_wall_seconds": 6.585251299999982,
+  "source_url": "https://www.youtube.com/watch?v=Vko4It1y7rY",
+  "source_start_seconds": 20,
+  "source_end_seconds": 26
+}

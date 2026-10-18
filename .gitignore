@@ -2,9 +2,11 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.logs/
 tmp/
 data/clips/
 data/landmarks/
+data/offline/
 models/custom/
 !models/custom/.gitkeep
 

@@ -28,6 +28,10 @@ IMAGE_CHOICES = [(str(ROOT / "examples" / "random_demo" / entry["file"]),
 VIDEO_CHOICES = [(str(ROOT / "examples" / "random_demo" / entry["file"]),
                   f"{entry['title']}. {entry['description']}")
                  for entry in EXAMPLE_MANIFEST.get("videos", [])]
+FEATURED_ROOT = ROOT / "examples" / "featured"
+FEATURED_MANIFEST_PATH = FEATURED_ROOT / "manifest.json"
+FEATURED_MANIFEST = json.loads(FEATURED_MANIFEST_PATH.read_text(encoding="utf-8")) if FEATURED_MANIFEST_PATH.exists() else {}
+FEATURED_VIDEOS = FEATURED_MANIFEST.get("videos", [])
 
 
 def choose_random_image():
@@ -42,8 +46,8 @@ def choose_gallery_image(event: gr.SelectData):
     return IMAGE_CHOICES[int(event.index)]
 
 
-def run_video(video_path: str, threshold: float):
-    result = PIPELINE.predict_video(video_path, threshold)
+def run_video(video_path: str, threshold: float, playback_speed: float = .5):
+    result = PIPELINE.predict_video(video_path, threshold, sample_hz=10, playback_speed=playback_speed)
     headline, scores, details = format_result(result)
     label = result.sequence_text or (result.prediction.label if result.prediction.accepted else "")
     if result.timeline:
@@ -100,9 +104,10 @@ with gr.Blocks(title="SgSL Landmark Demo") as demo:
 
     with gr.Tabs():
         with gr.Tab("Video / webcam"):
+            playback_speed = gr.Slider(.25, 1, value=.5, step=.25, label="Preview playback speed (inference samples source at 10 Hz)")
             with gr.Row():
                 video = gr.Video(sources=["upload", "webcam"], label="Record or upload one held sign")
-                preview = gr.Video(label="MediaPipe landmark preview", interactive=False)
+                preview = gr.Video(label="Landmarks + current letter + composing characters", interactive=False)
             video_example_note = gr.Textbox(label="Selected example", interactive=False,
                                             placeholder="Upload your own clip or select an example below.")
             with gr.Row():
@@ -115,6 +120,19 @@ with gr.Blocks(title="SgSL Landmark Demo") as demo:
             video_details = gr.Markdown(elem_classes=["small-note"])
             video_label = gr.Textbox(visible=False)
             add_video = gr.Button("Add accepted letter to word")
+            if FEATURED_VIDEOS:
+                gr.Markdown("### Presentation examples\nLoad a raw clip and press **Recognise clip** for fresh CPU inference. "
+                            "The clip may contain fingerspelling and word signs. Output is alphabet-model predictions, not sentence translation.")
+                gr.Examples([[str(FEATURED_ROOT / entry["file"]),
+                              f"{entry['title']}. {entry['description']}"] for entry in FEATURED_VIDEOS],
+                            inputs=[video, video_example_note], label="Load a presentation example",
+                            example_labels=[entry["title"] for entry in FEATURED_VIDEOS])
+                with gr.Accordion("Processed version for slides", open=False):
+                    for entry in FEATURED_VIDEOS:
+                        processed = FEATURED_ROOT / entry["processed_file"]
+                        if processed.exists():
+                            gr.Video(value=str(processed), label=f"Offline output: {entry['title']}", interactive=False)
+                            gr.DownloadButton("Download processed MP4", value=str(processed))
             primary_video = ROOT / "examples" / "heldout" / "heldout_CAB_montage.mp4"
             if primary_video.exists() and metadata.get("kind") == "landmark_mlp_v1":
                 gr.Markdown("Example: **C → A → B**, a montage of held-out still images with blank gaps.")
@@ -169,7 +187,9 @@ with gr.Blocks(title="SgSL Landmark Demo") as demo:
 - Official Google MediaPipe hand and pose landmarkers run on CPU.
 - The current Gradio demo sends uploaded media to the Space backend, where MediaPipe runs; browser-local extraction from the proposal is future work.
 - The trained alphabet MLP uses wrist-relative coordinates, pairwise landmark distances and finger angles.
-- Video scores are smoothed across frames and a letter is emitted after a short stable hold. Blank hand gaps let you repeat a letter.
+- Source video is sampled on a fixed 10 Hz source-time grid. Each sample uses its highest-probability class; at least two confident samples must agree in a trailing 0.3-second window, with a two-thirds majority and a class-score margin. A lone confidence spike cannot emit a letter. A no-hand gap lets you repeat a letter.
+- Preview defaults to 0.5x playback for inspection. Slower playback does not create extra source frames or remove motion blur; the source-time clock remains visible.
+- Video output preserves source timing: a top-left landmark-only inset, top-right current letter and bottom incremental character sequence share the same classifier/decoder as the exported presentation video. This is offline processing, not a live-speed claim.
 - Low-confidence results abstain instead of silently adding a character.
 - Custom isolated-sign clips can be extracted and trained with the included scripts.
 
@@ -184,7 +204,7 @@ with gr.Blocks(title="SgSL Landmark Demo") as demo:
 
     video_run.click(
         run_video,
-        inputs=[video, threshold],
+        inputs=[video, threshold, playback_speed],
         outputs=[preview, video_headline, video_scores, video_details, video_label],
     )
     image_run.click(
@@ -193,7 +213,7 @@ with gr.Blocks(title="SgSL Landmark Demo") as demo:
         outputs=[image_overlay, image_headline, image_scores, image_details, image_label],
     )
     random_video.click(choose_random_video, outputs=[video, video_example_note]).then(
-        run_video, inputs=[video, threshold],
+        run_video, inputs=[video, threshold, playback_speed],
         outputs=[preview, video_headline, video_scores, video_details, video_label],
     )
     random_image.click(choose_random_image, outputs=[image, image_example_note]).then(

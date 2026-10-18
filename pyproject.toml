@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9"]
+offline = ["Pillow>=10,<13", "yt-dlp>=2026.8.19"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

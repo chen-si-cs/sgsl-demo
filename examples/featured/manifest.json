@@ -1,0 +1,55 @@
+{
+  "videos": [
+    {
+      "file": "sgsl_bochap_04_10_consensus_excerpt.mp4",
+      "processed_file": "sgsl_bochap_04_10_consensus_processed.mp4",
+      "report_file": "sgsl_bochap_04_10_consensus_processed.predictions.json",
+      "title": "Bochap | 4-10s | 10 Hz / 0.5x playback",
+      "description": "Source seconds 4-10, sampled at 10 Hz with causal confidence consensus. Preview is slowed to 0.5x (12 seconds). Genuine model output, not manually corrected spelling.",
+      "kind": "fingerspelling_and_word_sign_excerpt",
+      "expected": null,
+      "source": "https://www.youtube.com/watch?v=LxdjT1g3REc",
+      "creator": "Lily Goh / ExtraOrdinary Horizons",
+      "source_start_seconds": 4.0,
+      "duration_seconds": 6.0,
+      "sampling_hz": 10.0,
+      "processed_playback_speed": 0.5,
+      "processed_duration_seconds": 12.0,
+      "license": "Original creator rights retained; no explicit reuse license verified"
+    },
+    {
+      "file": "deafsg_alphabet_10hz_excerpt.mp4",
+      "processed_file": "deafsg_alphabet_10hz_processed.mp4",
+      "report_file": "deafsg_alphabet_10hz_processed.predictions.json",
+      "title": "Deaf.SG | full A-Z lesson | 10 Hz / 0.5x",
+      "description": "Full alphabet lesson; unchanged 24-letter model and 10 Hz consistency decoder. J/Z are unsupported. Original on-screen letters are reference labels, not predictions.",
+      "kind": "alphabet_lesson",
+      "expected": null,
+      "source": "https://www.youtube.com/watch?v=6EW4PVT_d_4",
+      "creator": "Deaf.SG",
+      "source_start_seconds": 0.0,
+      "duration_seconds": 51.06666666666667,
+      "sampling_hz": 10.0,
+      "processed_playback_speed": 0.5,
+      "processed_duration_seconds": 102.13333333333334,
+      "license": "Original creator rights retained; no explicit reuse license verified"
+    },
+    {
+      "file": "deafsg_abcd_10hz_excerpt.mp4",
+      "processed_file": "deafsg_abcd_10hz_processed.mp4",
+      "report_file": "deafsg_abcd_10hz_processed.predictions.json",
+      "title": "Deaf.SG | ABCD opening | curated 0-6.5s",
+      "description": "Curated successful opening of the alphabet lesson: source 0-6.5s, 10 Hz inference, 0.5x playback. Not a general accuracy result. The complete lesson remains available with its errors.",
+      "kind": "curated_alphabet_excerpt",
+      "expected": null,
+      "source": "https://www.youtube.com/watch?v=6EW4PVT_d_4",
+      "creator": "Deaf.SG",
+      "source_start_seconds": 0.0,
+      "duration_seconds": 6.5,
+      "sampling_hz": 10.0,
+      "processed_playback_speed": 0.5,
+      "processed_duration_seconds": 13.0,
+      "license": "Original creator rights retained; no explicit reuse license verified"
+    }
+  ]
+}
